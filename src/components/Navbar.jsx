@@ -1,16 +1,30 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-
-import { Collapse, Typography, IconButton } from "@material-tailwind/react";
+import { ButtonNav } from "./Button-theme-nav";
+import { Collapse, Typography, IconButton, Input, Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 function NavList() {
   return (
     <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <CustomLink to="/" >Home</CustomLink>
-      <CustomLink to="/projek" >Project</CustomLink>
-      <CustomLink to="/blog" >Blog</CustomLink>
-      <CustomLink to="/docs" >Docs</CustomLink> 
+      <div className="relative flex w-full gap-2 md:w-max">
+        <Input
+          type="search"
+          color="black"
+          label="Type here..."
+          className="pr-20"
+          containerProps={{
+            className: "min-w-[288px] lg:mr-5",
+          }}
+        />
+        <Button size="sm" color="white" className="!absolute right-1 top-1 rounded lg:mr-5">
+          Search
+        </Button>
+      </div>
+      <CustomLink to="/">Home</CustomLink>
+      <CustomLink to="/projek">Popular</CustomLink>
+      <CustomLink to="/blog">MyList</CustomLink>
+      <ButtonNav/>
     </ul>
   );
 }
@@ -32,7 +46,7 @@ export function NavBar() {
     <nav className="w-full max-w-screen-6xl px-6 sm:px-32 py-3">
       <div className="flex items-center justify-between text-blue-gray-900">
         <Typography as="a" variant="h6" className="mr-4 cursor-pointer py-1.5">
-          <Link to="/"> Blackring.dev</Link>
+          <Link to="/"> GET MOVIE</Link>
         </Typography>
         <div className="hidden lg:block">
           <NavList />
@@ -49,8 +63,8 @@ export function NavBar() {
 }
 
 function CustomLink({ to, children, ...props }) {
-  const resolvePath = useResolvedPath(to)
-  const isActive = useMatch({ path: resolvePath.pathname, end: true})
+  const resolvePath = useResolvedPath(to);
+  const isActive = useMatch({ path: resolvePath.pathname, end: true });
 
   return (
     <li variant="small" color="blue-gray" className={isActive ? "active py-1 px-3 font-medium" : "py-1 px-3 font-medium"}>
