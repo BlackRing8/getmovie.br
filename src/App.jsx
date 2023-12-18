@@ -2,8 +2,6 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
-import Projek from "./pages/Projek";
-import Blog from "./pages/Blog";
 import Popular from "./pages/Popular";
 import MyList from "./pages/MyList";
 import { NavBar } from "./components/Navbar";
