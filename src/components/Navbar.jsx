@@ -3,6 +3,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { ButtonNav } from "./Button-theme-nav";
 import { Collapse, Typography, IconButton, Input, Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import logoGet from "../assets/logo/logo-get.jpg";
 
 function NavList() {
   return (
@@ -10,21 +11,21 @@ function NavList() {
       <div className="relative flex w-full gap-2 md:w-max">
         <Input
           type="search"
-          color="black"
+          color=""
           label="Type here..."
-          className="pr-20"
+          className="pr-20  text-gray-900 dark:text-white"
           containerProps={{
-            className: "min-w-[288px] lg:mr-5",
+            className: "min-w-[288px] lg:mr-5 text-white",
           }}
         />
-        <Button size="sm" color="white" className="!absolute right-1 top-1 rounded lg:mr-5">
+        <Button size="sm" color="red" className="!absolute right-1 text-gray-900 dark:text-white top-1 rounded lg:mr-5">
           Search
         </Button>
       </div>
       <CustomLink to="/">Home</CustomLink>
-      <CustomLink to="/projek">Popular</CustomLink>
-      <CustomLink to="/blog">MyList</CustomLink>
-      <ButtonNav/>
+      <CustomLink to="/popular">Popular</CustomLink>
+      <CustomLink to="/mylist">MyList</CustomLink>
+      <ButtonNav />
     </ul>
   );
 }
@@ -45,10 +46,16 @@ export function NavBar() {
   return (
     <nav className="w-full max-w-screen-6xl px-6 sm:px-32 py-3">
       <div className="flex items-center justify-between text-blue-gray-900">
-        <Typography as="a" variant="h6" className="mr-4 cursor-pointer py-1.5">
-          <Link to="/"> GET MOVIE</Link>
-        </Typography>
-        <div className="hidden lg:block">
+        <div className="flex">
+          {" "}
+          <img src={logoGet} className="w-7 h-7 mt-1" />
+          <Typography as="a" variant="h6" className="mr-4 cursor-pointer py-1.5">
+            <Link to="/" className="dark:text-white">
+              ET MOVIE
+            </Link>
+          </Typography>
+        </div>
+        <div className="hidden lg:block dark:text-white">
           <NavList />
         </div>
         <IconButton variant="text" className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden" ripple={false} onClick={() => setOpenNav(!openNav)}>
@@ -67,8 +74,8 @@ function CustomLink({ to, children, ...props }) {
   const isActive = useMatch({ path: resolvePath.pathname, end: true });
 
   return (
-    <li variant="small" color="blue-gray" className={isActive ? "active py-1 px-3 font-medium" : "py-1 px-3 font-medium"}>
-      <Link to={to} {...props} className="flex items-center hover:text-blue-500 transition-colors">
+    <li variant="small" color="blue-gray" className={isActive ? "active py-1 px-3 font-medium " : "py-1 px-3 font-medium dark:text-white"}>
+      <Link to={to} {...props} className="flex items-center hover:text-red-300 transition-colors">
         {children}
       </Link>
     </li>

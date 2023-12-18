@@ -1,7 +1,5 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  .App {
+    background-color: var(--background-color);
   }
   
   html {
@@ -14,7 +12,34 @@
     color: #000 !important;
   }
 
+
+  /* Bagian Navbar  */
+
   .active {
     color:red;
   }
+
+
+  #themeToggle {
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  #themeToggle svg {
+    transition: fill 0.3s ease;
+    margin-left: 6px;
+  }
+  
+  /* Gaya untuk tema gelap */
+  .dark {
+    fill: white; /* Warna ikon matahari pada tema gelap */
+  }
+  
+  /* Gaya untuk tema terang */
+  .light{
+    fill: black; /* Warna ikon matahari pada tema terang */
+  }
+
+  /*  */
 
