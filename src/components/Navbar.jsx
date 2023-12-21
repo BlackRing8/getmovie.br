@@ -18,7 +18,7 @@ function NavList() {
             className: "min-w-[288px] lg:mr-5 text-white",
           }}
         />
-        <Button size="sm" color="red" className="!absolute right-1 text-gray-900 dark:text-white top-1 rounded lg:mr-5">
+        <Button size="sm" color="" className="!absolute right-1 bg-ungu dark:bg-red-500 text-gray-900 dark:text-white top-1 rounded lg:mr-5">
           Search
         </Button>
       </div>
@@ -44,7 +44,7 @@ export function NavBar() {
   }, []);
 
   return (
-    <nav className="w-full max-w-screen-6xl px-6 sm:px-32 py-3">
+    <nav className="fixed w-full max-w-screen-6xl px-6 sm:px-32 py-1 bg-pink-300 dark:bg-black ">
       <div className="flex items-center justify-between text-blue-gray-900">
         <div className="flex">
           {" "}
@@ -74,8 +74,8 @@ function CustomLink({ to, children, ...props }) {
   const isActive = useMatch({ path: resolvePath.pathname, end: true });
 
   return (
-    <li variant="small" color="blue-gray" className={isActive ? "active py-1 px-3 font-medium " : "py-1 px-3 font-medium dark:text-white"}>
-      <Link to={to} {...props} className="flex items-center hover:text-red-300 transition-colors">
+    <li variant="small" color="blue-gray" className={isActive ? "active dark:text-red-500 py-1 px-3 font-medium " : "py-1 px-3 font-medium text-purple-600 dark:text-white"}>
+      <Link to={to} {...props} className="flex items-center dark:hover:text-red-500 hover:text-purple-100 transition-colors">
         {children}
       </Link>
     </li>

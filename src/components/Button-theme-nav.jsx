@@ -19,7 +19,7 @@ export function ButtonNav() {
 
   return (
     <>
-    <button color="black" id="themeToggle" className="bg-gray-500 w-8 h-8 dark:bg-red-700 py2 ml-4 lg:ml-0 rounded-md " onClick={themeToggleSwitch}> 
+    <button color="black" id="themeToggle" className="bg-ungu w-8 h-8 dark:bg-red-700 py2 ml-4 lg:ml-0 rounded-md " onClick={themeToggleSwitch}> 
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="">
     <circle cx="12" cy="12" r="5"></circle>
     <line x1="12" y1="1" x2="12" y2="3"></line>

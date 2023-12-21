@@ -8,9 +8,9 @@ import { NavBar } from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App dark:bg-black">
+    <div className="App">
      <NavBar/>
-     <div className="text-center">
+     <div>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/popular" element={<Popular/>}/>

@@ -1,6 +1,4 @@
-  .App {
-    background-color: var(--background-color);
-  }
+  
   
   html {
     scroll-behavior: smooth;
@@ -15,9 +13,9 @@
 
   /* Bagian Navbar  */
 
-  .active {
-    color:red;
-  }
+.active .dark {
+  color:black
+}
 
 
   #themeToggle {
@@ -39,6 +37,14 @@
   /* Gaya untuk tema terang */
   .light{
     fill: black; /* Warna ikon matahari pada tema terang */
+  }
+
+  /*  */
+
+  .test {
+    background: url("../src/assets/image/bn1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   /*  */
