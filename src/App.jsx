@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App dark:bg-black">
      <NavBar/>
-     <div className="text-center">
+     <div>
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/popular" element={<Popular/>}/>
