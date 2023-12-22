@@ -44,7 +44,7 @@ export function NavBar() {
   }, []);
 
   return (
-    <nav className="fixed w-full max-w-screen-6xl px-6 sm:px-32 py-1 bg-pink-300 dark:bg-black ">
+    <nav className="fixed z-10 w-full max-w-screen-6xl px-6 sm:px-32 py-1 bg-pink-300 dark:bg-black ">
       <div className="flex items-center justify-between text-blue-gray-900">
         <div className="flex">
           {" "}

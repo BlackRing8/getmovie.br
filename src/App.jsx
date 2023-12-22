@@ -8,7 +8,7 @@ import { NavBar } from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App dark:bg-black">
      <NavBar/>
      <div>
       <Routes>

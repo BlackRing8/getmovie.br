@@ -5,6 +5,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
+import BannerSatu from '../../assets/image/bn1.jpg';
 
 export default function CarouselHome() {
   return (
@@ -12,7 +13,7 @@ export default function CarouselHome() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -22,8 +23,16 @@ export default function CarouselHome() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper rounded-xl"
       >
-        <SwiperSlide className='test '></SwiperSlide>
-        <SwiperSlide className='bg-red-500'>slide2</SwiperSlide>
+        <SwiperSlide>
+          <div className='bg-green-500 dark:bg-black flex sm:h-auto sm:w-auto'>
+            <img src={BannerSatu} className='w-full sm:w-1/2 rounded-xl'/>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+        <div className='bg-green-500 dark:bg-black flex sm:h-auto sm:w-auto'>
+            <img src={BannerSatu} className='w-full sm:w-1/2 rounded-xl'/>
+          </div>
+        </SwiperSlide>
       </Swiper>
   )
 }

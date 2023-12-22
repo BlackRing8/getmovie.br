@@ -4,7 +4,7 @@ import CarouselHome from "../components/Home-component/Carousel";
 const Home = () => {
   return (
     <>
-      <div className="flex flex-wrap h-96 w-auto justify-center gap-2 mx-3 pt-20">
+      <div className="flex flex-wrap h-auto w-auto justify-center dark:bg-black gap-2 mx-3 sm:pt-20 pt-14">
         <CarouselHome/>
       </div>
     </>
