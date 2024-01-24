@@ -1,31 +1,16 @@
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
-import { ButtonNav } from "./Button-theme-nav";
 import { Collapse, Typography, IconButton, Input, Button } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import logoGet from "../assets/logo/logo-get.jpg";
+import logoKz from "../assets/logo/Logo-khaizel-02-01.png";
 
 function NavList() {
+
   return (
-    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <div className="relative flex w-full gap-2 md:w-max">
-        <Input
-          type="search"
-          color=""
-          label="Type here..."
-          className="pr-20  text-gray-900 dark:text-white"
-          containerProps={{
-            className: "min-w-[288px] lg:mr-5 text-white",
-          }}
-        />
-        <Button size="sm" color="" className="!absolute right-1 bg-ungu dark:bg-red-500 text-gray-900 dark:text-white top-1 rounded lg:mr-5">
-          Search
-        </Button>
-      </div>
+    <ul className="my-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6 ">
       <CustomLink to="/">Home</CustomLink>
-      <CustomLink to="/popular">Popular</CustomLink>
-      <CustomLink to="/mylist">MyList</CustomLink>
-      <ButtonNav />
+      <CustomLink to="/collection">Collection</CustomLink>
+      <CustomLink to="/contact">Contact Us</CustomLink>
     </ul>
   );
 }
@@ -44,14 +29,14 @@ export function NavBar() {
   }, []);
 
   return (
-    <nav className="fixed z-10 w-full max-w-screen-6xl px-6 sm:px-32 py-1 bg-pink-300 dark:bg-black ">
+    <nav className="fixed z-10 w-full h-[55px] max-w-screen-6xl px-6 sm:px-32 py-1 bg-cr-1 dark:bg-black ">
       <div className="flex items-center justify-between text-blue-gray-900">
         <div className="flex">
           {" "}
-          <img src={logoGet} className="w-7 h-7 mt-1" />
+          
           <Typography as="a" variant="h6" className="mr-4 cursor-pointer py-1.5">
-            <Link to="/" className="dark:text-white">
-              ET MOVIE
+            <Link to="/">
+            <img src={logoKz} className="w-full h-7 mt-1" />
             </Link>
           </Typography>
         </div>
@@ -74,8 +59,8 @@ function CustomLink({ to, children, ...props }) {
   const isActive = useMatch({ path: resolvePath.pathname, end: true });
 
   return (
-    <li variant="small" color="blue-gray" className={isActive ? "active dark:text-red-500 py-1 px-3 font-medium " : "py-1 px-3 font-medium text-purple-600 dark:text-white"}>
-      <Link to={to} {...props} className="flex items-center dark:hover:text-red-500 hover:text-purple-100 transition-colors">
+    <li variant="small" color="blue-gray" className={isActive ? "active py-1 px-3 font-medium " : "py-1 px-3 font-medium text-cr-6 dark:text-white"}>
+      <Link to={to} {...props} className="flex items-center hover:text-cr-3 transition-colors">
         {children}
       </Link>
     </li>

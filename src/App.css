@@ -1,5 +1,4 @@
   
-  
   html {
     scroll-behavior: smooth;
   }
@@ -13,7 +12,7 @@
 
   /* Bagian Navbar  */
 
-.active .dark {
+.active {
   color:black
 }
 
@@ -48,4 +47,10 @@
   }
 
   /*  */
+
+  .bgCustom {
+    background-image: url('./assets/image/bg-jb1-01.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
