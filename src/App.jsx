@@ -2,19 +2,19 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./pages/Home";
-import Popular from "./pages/Popular";
-import Mylist from "./pages/My-list";
+import Collection from "./pages/Collection";
+import Contact from "./pages/Contact";
 import { NavBar } from "./components/Navbar";
 
-function App() {
+const App = () => {  
   return (
-    <div className="App dark:bg-black">
+    <div className="App bg-white dark:bg-black">
      <NavBar/>
      <div>
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/popular" element={<Popular/>}/>
-        <Route path="/mylist" element={<Mylist/>}/>
+        <Route path="/collection" element={<Collection/>}/>
+        <Route path="/contact" element={<Contact/>}/>
       </Routes>
      </div>
     </div>

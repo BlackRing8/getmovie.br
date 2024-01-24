@@ -1,11 +1,15 @@
+"use client";
 import React from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import BannerSatu from '../../assets/image/bn1.jpg';
+import { EffectFade } from 'swiper/modules';
+import BannerSatu from '../../assets/image/bn1-03.png';
+import BannerDua from '../../assets/image/bn2-03.png';
 
 export default function CarouselHome() {
   return (
@@ -17,20 +21,20 @@ export default function CarouselHome() {
           disableOnInteraction: false,
         }}
         pagination={{
-          clickable: true,
+          clickable: true ,
         }}
         navigation={false}
-        modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper rounded-xl"
+        modules={[Autoplay, Pagination, Navigation, EffectFade]} effect='fade'
+        className="mySwiper sm:h-[340px] rounded-large"
       >
-        <SwiperSlide>
-          <div className='bg-green-500 dark:bg-black flex sm:h-auto sm:w-auto'>
-            <img src={BannerSatu} className='w-full sm:w-1/2 rounded-xl'/>
+        <SwiperSlide className=''>
+          <div className=' flex sm:w-auto rounded-xl'>
+            <img src={BannerSatu} className=''/>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-        <div className='bg-green-500 dark:bg-black flex sm:h-auto sm:w-auto'>
-            <img src={BannerSatu} className='w-full sm:w-1/2 rounded-xl'/>
+        <SwiperSlide className=''>
+          <div className=' flex sm:w-auto'>
+            <img src={BannerDua} className=''/>
           </div>
         </SwiperSlide>
       </Swiper>
