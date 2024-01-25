@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { Collapse, Typography, IconButton, Input, Button } from "@material-tailwind/react";
