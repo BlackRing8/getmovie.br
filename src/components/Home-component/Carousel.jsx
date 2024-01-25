@@ -25,7 +25,7 @@ export default function CarouselHome() {
         }}
         navigation={false}
         modules={[Autoplay, Pagination, Navigation, EffectFade]} effect='fade'
-        className="mySwiper sm:h-[340px] rounded-large"
+        className="mySwiper sm:h-[400px] rounded-large"
       >
         <SwiperSlide className=''>
           <div className=' flex sm:w-auto rounded-xl'>

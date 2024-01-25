@@ -47,7 +47,7 @@ export function NavBar() {
           {openNav ? <XMarkIcon className="h-6 w-6" strokeWidth={2} /> : <Bars3Icon className="h-6 w-6" strokeWidth={2} />}
         </IconButton>
       </div>
-      <Collapse open={openNav}>
+      <Collapse open={openNav} className="bg-cr-1">
         <NavList />
       </Collapse>
     </nav>
