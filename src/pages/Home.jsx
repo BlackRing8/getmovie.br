@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import CarouselHome from "../components/Home-component/Carousel";
 import logo1 from "../assets/logo/logo-tulisan-gelap-03.png";
@@ -24,7 +23,7 @@ const Home = () => {
               <img className="h-full w-full" src={logo2} />
             </div>
             <div className="grid grid-cols-1 sm:h-36 w-auto h-[70px] sm:ml-5">
-              <h2 className="text-sm sm:text-3xl font-myFont font-semibold text-cr-1">Khaizel at Shopee</h2>
+              <h2 className="text-sm sm:text-3xl font-myFont font-semibold text-cr-1">Khaizel at Shope</h2>
               <span className="font-semibold text-4xl sm:text-8xl text-cr-1">10%</span>
             </div>
           </div>
