@@ -1,9 +1,9 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Home from "./pages/Home";
-import Collection from "./pages/Collection";
-import Contact from "./pages/Contact";
+import Home from "./pages_/Home";
+import Collection from "./pages_/Collection";
+import Contact from "./pages_/Contact";
 import { NavBar } from "./components/Navbar";
 
 const App = () => {  
