@@ -31,7 +31,7 @@ const Home = () => {
         </div>
 
         <div className="flex h-40 sm:h-80  w-full sm:mb-20 justify-center items-center">
-            <div className="flex flex-row-reverse h-full sm:h-72 w-full ">
+            <div className="flex flex-wrap h-full sm:h-72 w-full ">
                 <div className="flex w-1/3 h-full justify-center items-center">
                     <div className="h-28 w-28 sm:h-72 sm:w-72">
                         <img className="w-full h-full rounded-xl" src={gambar1}/>
