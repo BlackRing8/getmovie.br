@@ -1,52 +1,52 @@
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    overflow-x: hidden;
-    background-color: #fff !important;
-    color: #000 !important;
-  }
-
-
-  /* Bagian Navbar  */
-
-.active {
-  color:black
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+  background-color: #fff !important;
+  color: #000 !important;
+}
 
-  #themeToggle {
-    border: none;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  #themeToggle svg {
-    transition: fill 0.3s ease;
-    margin-left: 6px;
-  }
-  
-  /* Gaya untuk tema gelap */
-  .dark {
-    fill: white; /* Warna ikon matahari pada tema gelap */
-  }
-  
-  /* Gaya untuk tema terang */
-  .light{
-    fill: black; /* Warna ikon matahari pada tema terang */
-  }
+/* Bagian Navbar  */
 
-  /*  */
+.active {
+  color: black;
+}
 
+#themeToggle {
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
 
+#themeToggle svg {
+  transition: fill 0.3s ease;
+  margin-left: 6px;
+}
 
-  /*  */
+/* Gaya untuk tema gelap */
+.dark {
+  fill: white; /* Warna ikon matahari pada tema gelap */
+}
 
-  .bgCustom {
-    background-image: url('./assets/image/bg-jb1-01.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+/* Gaya untuk tema terang */
+.light {
+  fill: black; /* Warna ikon matahari pada tema terang */
+}
 
+/*  */
+
+/*  */
+
+.bgCustom {
+  background-image: url("./assets/image/bg-jb1-01.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgCustom2 {
+  background-image: url("./assets/image/img1.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
